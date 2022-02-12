@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rich Text</title>
+</head>
+
+<body id="vanta-canvas">
+    <div class="main-content">
+        <h1>Rich Text by LutoBeibe</h1>
+        <div class="text-editor-header"> <!-- Header Text Editor-->
+            <button type="button" class="btn" data-element="bold">
+                <i class="fa-solid fa-bold"></i>
+            </button>   
+            <button type="button" class="btn" data-element="italic">
+                <i class="fa fa-italic"></i>
+            </button>                
+            <button type="button" class="btn" data-element="underline">
+                <i class="fa fa-underline"></i>
+            </button>                
+            <button type="button" class="btn" data-element="insertUnorderedList">
+                <i class="fa fa-list-ul"></i>
+            </button>               
+            <button type="button" class="btn" data-element="insertOrderedList">
+                <i class="fa fa-list-ol"></i>
+            </button>                
+            <button type="button" class="btn" data-element="createlink">
+                <i class="fa fa-link"></i>
+            </button>         
+            <button type="button" class="btn" data-element="justifyLeft">
+                <i class="fa fa-align-left"></i>
+            </button>
+            <button type="button" class="btn" data-element="justifyCenter">
+                <i class="fa fa-align-center"></i>
+            </button> 
+            <button type="button" class="btn" data-element="justifyRight">
+                <i class="fa fa-align-right"></i>
+            </button> 
+            <button type="button" class="btn" data-element="justifyFull">
+                <i class="fa fa-align-justify"></i>
+            </button>  
+            <button type="button" class="btn" data-element="insertImage">
+                <i class="fa fa-image"></i>
+            </button>
+            <button onclick="location.reload();" style="margin-right: 50px;" type="button" class="btn" data-element="Refresh">
+                <i class="fa fa-arrows-rotate"></i>
+            </button>    
+        </div> <!-- End Header Text Editor -->
+
+        <!-- Content Text -->
+            <div class="content" contenteditable="true"></div>         
+    </div>
+
+    <!--App File -->
+        <script src="./app.js"></script>
+
+    <!-- Font Awersome-->
+        <script src="https://kit.fontawesome.com/31fd91d0b3.js" crossorigin="anonymous"></script>
+
+    <!-- Vanta.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+        <script>
+        VANTA.HALO({
+        el: "#vanta-canvas",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        amplitudeFactor: 3.00,
+        size: 3.00
+        })
+    </script> <!-- End Vanta.js -->
+
+
+</body>
+</html>
